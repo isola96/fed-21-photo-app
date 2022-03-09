@@ -1,0 +1,346 @@
+{
+	"info": {
+		"_postman_id": "1925d09b-0f31-4df0-96dc-0913ba9c6251",
+		"name": "PhotoApp Heroku",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Albums",
+			"item": [
+				{
+					"name": "Get all albums",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://hidden-dawn-22436.herokuapp.com//albums",
+							"protocol": "https",
+							"host": [
+								"hidden-dawn-22436",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"",
+								"albums"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a specific album",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://hidden-dawn-22436.herokuapp.com/albums/4",
+							"protocol": "https",
+							"host": [
+								"hidden-dawn-22436",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"albums",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post an album",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Cute cats\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hidden-dawn-22436.herokuapp.com/albums",
+							"protocol": "https",
+							"host": [
+								"hidden-dawn-22436",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"albums"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update an album",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Cute Cats\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hidden-dawn-22436.herokuapp.com/albums/4",
+							"protocol": "https",
+							"host": [
+								"hidden-dawn-22436",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"albums",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add photo to an album",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"photo_id\": 7\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hidden-dawn-22436.herokuapp.com/albums/4/photos",
+							"protocol": "https",
+							"host": [
+								"hidden-dawn-22436",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"albums",
+								"4",
+								"photos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Photos",
+			"item": [
+				{
+					"name": "Get all photos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://hidden-dawn-22436.herokuapp.com/photos",
+							"protocol": "https",
+							"host": [
+								"hidden-dawn-22436",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"photos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a specific photo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://hidden-dawn-22436.herokuapp.com/photos/5",
+							"protocol": "https",
+							"host": [
+								"hidden-dawn-22436",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"photos",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post a photo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Meow\",\n    \"url\": \"https://www.pexels.com/sv-se/foto/djur-sot-pals-katter-3616232/\",\n    \"comment\": \"Peek a boo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hidden-dawn-22436.herokuapp.com/photos",
+							"protocol": "https",
+							"host": [
+								"hidden-dawn-22436",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"photos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a photo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"An orange cat\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hidden-dawn-22436.herokuapp.com/photos/7",
+							"protocol": "https",
+							"host": [
+								"hidden-dawn-22436",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"photos",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profile",
+			"item": [
+				{
+					"name": "Register a user",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"johanna@jönsson.se\",\n    \"password\": \"memelorde\",\n    \"first_name\": \"Johanna\",\n    \"last_name\": \"Jönsson\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hidden-dawn-22436.herokuapp.com/register",
+							"protocol": "https",
+							"host": [
+								"hidden-dawn-22436",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "meowmeow",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "stevie@mejl.se",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
